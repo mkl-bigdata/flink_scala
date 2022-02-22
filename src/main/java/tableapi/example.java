@@ -33,6 +33,8 @@ public class example {
 
         //把表对象注册成表
         tableEnv.createTemporaryView("mytable",table);
+        //把流注册成表
+        tableEnv.createTemporaryView("mytable2",mappedStream);
 
 
         String sql = "select id,temperature from mytable where temperature > 10.0";
